@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "欢迎使用PUBG-Radar一键脚本"
-echo "版本：02-02"
+echo "版本：05-02"
 echo "请在下面输入你的内网ip" 
 read -p "内网ip： " ip
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
