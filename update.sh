@@ -1,18 +1,14 @@
 #!/bin/bash
-echo "欢迎使用一键搭建"
-echo "即将搭建的是4.26版本"
-echo "准备开始安装"
-read -p "回车后开始安装"
-echo "请输入你的内网ip" 
+echo "欢迎使用PUBG-Radar一键脚本"
+echo "版本：02-02"
+echo "请在下面输入你的内网ip" 
 read -p "内网ip： " ip
-cp /root/PUBG-Radar-Onekey/restart.sh /root/restart.sh
-chmod +x restart.sh
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 
-echo "ss搭建成，请记住连接信息"
-read -p "记住了吗？任意键继续" 
+echo "雷达加速器搭建成功，请记住您的雷达信息"
+read -p "任意键继续" 
 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
 source ~/.bash_profile
@@ -28,11 +24,13 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/IT5Y/PUBG-Radar
+git clone https://github.com/IT5Y/PUBG-Radar.git
 cd PUBG-Radar/
 npm i
 npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
+cp /root/PUBG-Radar/restart.sh /root/restart.sh
+chmod +x restart.sh
 
 echo "搭建完成"

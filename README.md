@@ -1,29 +1,26 @@
-# Sci Chicken
+# Sannian-Cloud-Radar
 
-A PUBG pcap playback system that does not hog CPU/GPU, works with version 3.7.33
+交流群：697156614
 
-## Sniff
+更新日志：
 
-You need an extra linux server to be the man in the middle
+04-28A 去除人物ID杂乱，物品显示简化，增加一键搭建指令
 
-Server running command：
-```bash
-yum install git;git clone https://github.com/IT5Y/PUBG-Radar-Onekey.git; chmod +x . /root/PUBG-Radar-Onekey/update.sh;. /root/PUBG-Radar-Onekey/update.sh
-```
+04-29A 修复本地地图加载化
 
-## Translation
+04-30A 修复车辆跟随
 
-回车后开始安装  Enter after installation
+05-01A 修复地图高清
 
-记住了吗？任意键继续  Remember? Any key continues
-
-请输入你的内网ip   Please enter your private Network ip
-
-搭建完成 Build up
+05-02A 修复部分物品偏移
 
 
-## Link
+## 教程
 
-Local computer using SSTAP connection
+搭建指令：
 
-Watching address  serverIP:20086/
+yum install git;git clone https://github.com/sannian66/Sandar.git; chmod +x . /root/Sandar/update.sh;. /root/Sandar/update.sh
+
+重启或网页打不开指令：
+
+chmod +x ./restart.sh;./restart.sh# Test
