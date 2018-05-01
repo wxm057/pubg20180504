@@ -30,7 +30,7 @@ npm i
 npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
-cp /root/PUBG-Radar/restart.sh /root/restart.sh
+cp /root/libpcap-1.8.1/PUBG-Radar/restart.sh /root/restart.sh
 chmod +x restart.sh
 
 echo "搭建完成"
