@@ -24,7 +24,7 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/IT5Y/PUBG-Radar.git
+git clone https://github.com/qq290598268/20180504.git
 cd PUBG-Radar/
 npm i
 npm i -g pino
